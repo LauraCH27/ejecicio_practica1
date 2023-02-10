@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INMUEBLES</h1>
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+         <li>
+            <label for="tentacles" >Id inmueble:</label>
+            <input type="text" id="numero" placeholder="Ingrese el Id"  name="idinmuble">
+            <span id="id_error"class='tooltip'></span>
+         </li>
+         <br>
+         <div id="resultados" style="display: none;">
+            <div class="form-content">
+         <li>
+           <label for="mail">Dirección:</label>
+           <input type="text" placeholder="Ingrese una Dirección" id="direccion" name="user_mail">
+           <span id="adress"class='tooltip'></span>
+         </li>
+         <br>
+         <li>
+            <label for="tentacles">Teléfono:</label>
+            <input type="number" placeholder="Ingrese su Teléfono" id="telefono" name="tentacles"
+            required>
+         </li>
+         <br>
+         <li>
+            <label for="tentacles">Precio:</label>
+            <input type="number" placeholder="Ingrese un Precio"id="precio" name="tentacles"
+            required>
+          </li>
+          <br>
+          <li>
+            <label>Estado:<input type="checkbox" id="estado" value="first_checkbox"> </label><br>
+          </li>
+          <br>
+          <button type="button" id="Enviar" style="display: none;" >Enviar</button>
+        </div>
+    </div>
+            <button type="button" value="Buscar" onclick="buscar()">Buscar</button>
+            <button type="button" value="Listar" id="formulario" >Listar</button>
+            <button type="button" value="Buscar" onclick="Agregar_datos()"  >Ingresar datos</button>
+        </ul>
+        <br/>
+       </form>
+                    <div id="formModal" style="display: none;">
+                        <div class="form-content">
+                        <form>
+                            <label>Digite el rango de precios deseado:</label><br><br>
+                            <label>Número 1:</label>
+                            <input type="number" id="desde"><br><br>
+                            <label>Número 2:</label>
+                            <input type="number" id="hasta"><br><br>
+                           <!-- <label>Estado:</label>
+                            <select id="estado">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                            </select><br><br>-->
+                            <button type="button" onclick="listarInmuebles()">Enviar</button>
+                        </form>
+                        </div>
+                    </div>
+
+
+</body>
+<script src="arreglo.js"></script>
+<script src="formularios.js"></script>
+</html>
