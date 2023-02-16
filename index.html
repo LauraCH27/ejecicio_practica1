@@ -4,71 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inmueble</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/staly.css">
+
 </head>
-<body>
-    <h1>INMUEBLES</h1>
-    <form action="/my-handling-form-page" method="post">
-        <ul>
+<body style="">
+  <div class="contenedor container my-3 md-5 text-justify" >
+    <form action="/my-handling-form-page" method="post"> <br>
+      <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">INMUEBLES</h1> <br>
+        <ul style="list-style: none;">
          <li>
-            <label for="tentacles" >Id inmueble:</label>
-            <input type="text" id="numero" placeholder="Ingrese el Id"  name="idinmuble">
+            <label for="tentacles" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 150%;" >Id inmueble:</label>
+            <input class="campo" type="text" id="numero" placeholder="Ingrese el Id"  name="idinmuble">
             <span id="id_error"class='tooltip'></span>
          </li>
          <br>
          <div id="resultados" style="display: none;">
             <div class="form-content">
          <li>
-           <label for="mail">Dirección:</label>
-           <input type="text" placeholder="Ingrese una Dirección" id="direccion" name="user_mail">
+           <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 150%; width: 10%;" for="mail">Dirección:</label>
+           <input class="campo" type="text" placeholder="Ingrese una Dirección" id="direccion" name="user_mail">
            <span id="adress"class='tooltip'></span>
          </li>
          <br>
          <li>
-            <label for="tentacles">Teléfono:</label>
-            <input type="number" placeholder="Ingrese su Teléfono" id="telefono" name="tentacles"
+            <label for="tentacles" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 150%; width: 10%;">Teléfono:</label>
+            <input class="campo" type="number" placeholder="Ingrese su Teléfono" id="telefono" name="tentacles"
             required>
          </li>
          <br>
          <li>
-            <label for="tentacles">Precio:</label>
-            <input type="number" placeholder="Ingrese un Precio"id="precio" name="tentacles"
+            <label for="tentacles" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 150%; width: 10%; ">Precio:</label>
+            <input class="campo" type="number" placeholder="Ingrese un Precio"id="precio" name="tentacles"
             required>
           </li>
           <br>
           <li>
-            <label>Estado:<input type="checkbox" id="estado" value="first_checkbox"> </label><br>
+            <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 150%; width: 10%;">Estado:<input class="campo" type="checkbox" id="estado" value="first_checkbox"> </label><br>
           </li>
           <br>
           <button type="button" id="Enviar" style="display: none;" >Enviar</button>
         </div>
     </div>
-            <button type="button" value="Buscar" onclick="buscar()">Buscar</button>
-            <button type="button" value="Listar" id="formulario" >Listar</button>
-            <button type="button" value="Buscar" onclick="Agregar_datos()"  >Ingresar datos</button>
+            <button class="btn btn-outline-primary" type="button" value="Buscar" onclick="buscar()">Buscar</button>
+            <button class="btn btn-outline-primary" type="button" value="Listar" id="formulario" >Listar</button>
+            <button class="btn btn-outline-primary" type="button" value="Buscar" onclick="Agregar_datos()"  >Ingresar datos</button>
         </ul>
         <br/>
        </form>
                     <div id="formModal" style="display: none;">
                         <div class="form-content">
                         <form>
-                            <label>Digite el rango de precios deseado:</label><br><br>
-                            <label>Número 1:</label>
-                            <input type="number" id="desde"><br><br>
-                            <label>Número 2:</label>
-                            <input type="number" id="hasta"><br><br>
+                            <label  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Digite el rango de precios deseado:</label><br><br>
+                            <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Número 1:</label>
+                            <input class="campo" type="number" id="desde"><br><br>
+                            <label  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Número 2:</label>
+                            <input class="campo" type="number" id="hasta"><br><br>
                            <!-- <label>Estado:</label>
                             <select id="estado">
                             <option value="true">Activo</option>
                             <option value="false">Inactivo</option>
                             </select><br><br>-->
-                            <button type="button" onclick="listarInmuebles()">Enviar</button>
+                            <button class="btn btn-outline-primary" type="button" onclick="listarInmuebles()">Enviar</button>
+                          </div>  
+                          
                         </form>
+                        <div>
                         </div>
                     </div>
+              
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
+
 <script src="arreglo.js"></script>
 <script src="formularios.js"></script>
 </html>

@@ -1,0 +1,11 @@
+.contenedor{
+    background-image: url(/Imganes/fondo1.jpg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.campo{
+    width: 15%;
+    height: 20%;
+    border-radius: 15%;
+    
+}
